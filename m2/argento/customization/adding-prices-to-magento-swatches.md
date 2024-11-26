@@ -23,12 +23,12 @@ category: Argento
     ], function($, _, priceUtils) {
 
         function addPricesToOptions() {
-            if (!$('[data-role=swatch-options]').first().data('mageSwatchRenderer')) {
+            if (!$('[data-role=swatch-options]').first().data('mage-SwatchRenderer')) {
                 return setTimeout(addPricesToOptions, 500);
             }
 
             var config = $('[data-role=swatch-options]').first()
-                    .data('mageSwatchRenderer').options.jsonConfig;
+                    .data('mage-SwatchRenderer').options.jsonConfig;
 
             $('.swatch-attribute').each(function () {
                 var attributeId = $(this).data('attribute-id');
